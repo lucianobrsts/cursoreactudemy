@@ -57,3 +57,15 @@ h3 {
 p {
   font-style: italic;
 }
+
+button {
+  background-color: #7a1f6e;
+  border: solid 1px #fff;
+  width: 12em;
+}
+
+button:hover {
+  background-color: #490d41;
+  border: solid 1px #ffd904;
+  color: #ffd904;
+}
