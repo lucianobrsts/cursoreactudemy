@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 
 import City from './assets/city.jpg'
+import ManagerData from "./components/ManagerData";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -16,6 +17,8 @@ function App() {
 
       {/* Imagem em asset*/}
       <img src={City} alt="City" />
+
+      <ManagerData />
     </div>
   );
 }
