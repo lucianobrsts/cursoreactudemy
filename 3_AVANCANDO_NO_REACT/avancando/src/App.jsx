@@ -1,7 +1,7 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
+
+import City from './assets/city.jpg'
 
 function App() {
   const [count, setCount] = useState(0);
@@ -9,9 +9,13 @@ function App() {
   return (
     <div>
       <h1>Avançando em React</h1>
+      <h2>Uso de imagens</h2>
 
       {/* Imagem em public */}
       <img src="/img1.jpg" alt="Paisagem" />
+
+      {/* Imagem em asset*/}
+      <img src={City} alt="City" />
     </div>
   );
 }
