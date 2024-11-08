@@ -3,6 +3,7 @@ import "./App.css";
 
 import City from './assets/city.jpg'
 import ManagerData from "./components/ManagerData";
+import ListRender from "./components/ListRender";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -19,6 +20,7 @@ function App() {
       <img src={City} alt="City" />
 
       <ManagerData />
+      <ListRender />
     </div>
   );
 }
