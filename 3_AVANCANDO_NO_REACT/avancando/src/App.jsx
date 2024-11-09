@@ -12,6 +12,7 @@ import Container from "./components/Container";
 import ExecuteFunction from "./components/ExecuteFunction";
 import Message from "./components/Message";
 import ChangeMessageState from "./components/ChangeMessageState";
+import UserDetail from "./components/UserDetail";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -24,7 +25,7 @@ function App() {
   ];
 
   function showMessage() {
-    console.log("Evento do componente pai!")
+    console.log("Evento do componente pai!");
   }
 
   const [message, setMessage] = useState("");
@@ -32,6 +33,12 @@ function App() {
   const handleMessage = (msg) => {
     setMessage(msg);
   };
+
+  const people = [
+    { id: 1, name: "Luciano Brito", age: 49, ocupation: "Programador", ofLegalAge: true },
+    { id: 2, name: "Fulano", age: 22, ocupation: "Product Manager", ofLegalAge: false },
+    { id: 3, name: "Cicrano", age: 35, ocupation: "Product Owner", ofLegalAge: false },
+  ];
 
   return (
     <div>
@@ -60,7 +67,8 @@ function App() {
 
       {/* Loop em array de objetos */}
       {cars.map((car) => (
-        <CardDetail key={car.id}
+        <CardDetail
+          key={car.id}
           brand={car.brand}
           color={car.color}
           km={car.km}
@@ -78,13 +86,24 @@ function App() {
       <Container myValue="Testing 2">
         <p>Testando o conteiner</p>
       </Container>
-      
+
       {/* Executar função */}
       <ExecuteFunction myFunction={showMessage} />
-      
+
       {/* State lift */}
       <Message msg={message} />
       <ChangeMessageState handleMessage={handleMessage} />
+
+      {/* Desafio */}
+      {people.map((person) => (
+        <UserDetail
+          key={person.id}
+          name={person.name}
+          age={person.age}
+          ocupation={person.ocupation}
+          ofLegalAge={person.ofLegalAge}
+        />
+      ))}
     </div>
   );
 }
