@@ -12,6 +12,11 @@ function App() {
   const [count, setCount] = useState(0);
   const name = "Luciano";
   const [userName] = useState("Maria");
+  const cars = [
+    { id: 1, brand: "Ferrari", color: "Amarela", newCar: true, km: 0 },
+    { id: 2, brand: "Kia", color: "Branco", newCar: false, km: 34343 },
+    { id: 3, brand: "Renault", color: "Azul", newCar: false, km: 234 },
+  ];
 
   return (
     <div>
@@ -28,15 +33,25 @@ function App() {
       <ListRender />
       <ConditionalRender />
 
-      { /* props */ }
+      {/* props */}
       <ShowUserName name={userName} />
 
-      { /* destructuring */ }
+      {/* destructuring */}
       <CardDetail brand="Wv" km={100000} color="Azul" newCar={false} />
 
       {/* Reaproveitando components */}
       <CardDetail brand="Ford" color="Vermelha" km={0} newCar={true} />
       <CardDetail brand="Fiat" color="Branco" km={4500} newCar={false} />
+
+      {/* Loop em array de objetos */}
+      {cars.map((car) => (
+        <CardDetail
+          brand={car.brand}
+          color={car.color}
+          km={car.km}
+          newCar={car.newCar}
+        />
+      ))}
     </div>
   );
 }
