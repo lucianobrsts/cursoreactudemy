@@ -8,6 +8,7 @@ import ConditionalRender from "./components/ConditionalRender";
 import ShowUserName from "./components/ShowUserName";
 import CardDetail from "./components/CardDetail";
 import Fragments from "./components/Fragments";
+import Container from "./components/Container";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -46,7 +47,7 @@ function App() {
 
       {/* Loop em array de objetos */}
       {cars.map((car) => (
-        <CardDetail
+        <CardDetail key={car.id}
           brand={car.brand}
           color={car.color}
           km={car.km}
@@ -56,6 +57,14 @@ function App() {
 
       {/* Fragment */}
       <Fragments propsFragment="Teste" />
+
+      {/* Children */}
+      <Container myValue="Testing">
+        <p>Este é o conteúdo</p>
+      </Container>
+      <Container myValue="Testing 2">
+        <p>Testando o conteiner</p>
+      </Container>
     </div>
   );
 }
