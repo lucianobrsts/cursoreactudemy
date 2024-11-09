@@ -6,6 +6,7 @@ import MyComponent from "./components/MyComponent";
 function App() {
   const n = 15;
   const [name] = useState("Luciano Brito");
+  const redTitle = true;
 
   return (
     <div className="root">
@@ -31,12 +32,14 @@ function App() {
       <h2
         style={
           name === "Luciano Brito"
-            ? { color: "green", backgroundColor: "#000" }
-            : null
-        }
-      >
+          ? { color: "green", backgroundColor: "#000" }
+          : null}>
         Teste nome
       </h2>
+        
+        {/* CSS com classe dinâmica */}
+        <h2 className={redTitle ? "red-title" : "title"}>Este título vai ter classe dinâmica</h2>
+        
     </div>
   );
 }
