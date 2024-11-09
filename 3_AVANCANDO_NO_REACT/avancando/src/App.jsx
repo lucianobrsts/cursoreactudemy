@@ -32,7 +32,11 @@ function App() {
       <ShowUserName name={userName} />
 
       { /* destructuring */ }
-      <CardDetail brand="Wv" km={100000} color="Azul" />
+      <CardDetail brand="Wv" km={100000} color="Azul" newCar={false} />
+
+      {/* Reaproveitando components */}
+      <CardDetail brand="Ford" color="Vermelha" km={0} newCar={true} />
+      <CardDetail brand="Fiat" color="Branco" km={4500} newCar={false} />
     </div>
   );
 }
