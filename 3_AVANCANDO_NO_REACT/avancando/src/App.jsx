@@ -7,10 +7,11 @@ import ListRender from "./components/ListRender";
 import ConditionalRender from "./components/ConditionalRender";
 import ShowUserName from "./components/ShowUserName";
 import CardDetail from "./components/CardDetail";
+import Fragments from "./components/Fragments";
 
 function App() {
   const [count, setCount] = useState(0);
-  const name = "Luciano";
+  //const name = "Luciano";
   const [userName] = useState("Maria");
   const cars = [
     { id: 1, brand: "Ferrari", color: "Amarela", newCar: true, km: 0 },
@@ -52,6 +53,9 @@ function App() {
           newCar={car.newCar}
         />
       ))}
+
+      {/* Fragment */}
+      <Fragments propsFragment="Teste" />
     </div>
   );
 }
