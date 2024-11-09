@@ -10,6 +10,8 @@ import CardDetail from "./components/CardDetail";
 import Fragments from "./components/Fragments";
 import Container from "./components/Container";
 import ExecuteFunction from "./components/ExecuteFunction";
+import Message from "./components/Message";
+import ChangeMessageState from "./components/ChangeMessageState";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -24,6 +26,12 @@ function App() {
   function showMessage() {
     console.log("Evento do componente pai!")
   }
+
+  const [message, setMessage] = useState("");
+
+  const handleMessage = (msg) => {
+    setMessage(msg);
+  };
 
   return (
     <div>
@@ -73,6 +81,10 @@ function App() {
       
       {/* Executar função */}
       <ExecuteFunction myFunction={showMessage} />
+      
+      {/* State lift */}
+      <Message msg={message} />
+      <ChangeMessageState handleMessage={handleMessage} />
     </div>
   );
 }
