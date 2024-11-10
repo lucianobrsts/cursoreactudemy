@@ -19,6 +19,13 @@ const MyForm = ({user}) => {
     event.preventDefault();
     console.log("Enviando o formulário!");
     console.log(name, email);
+
+    // validação
+    // envio
+    
+    // 7- Limpar form
+    setName("");
+    setEmail("");
   };
 
   return (
