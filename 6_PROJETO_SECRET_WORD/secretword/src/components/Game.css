@@ -17,7 +17,7 @@
     display: flex;
 }
 
-.letter, blankSquare {
+.letter, .blankSquare {
     font-size: 70px;
     line-height: 1.5;
     border: 3px solid #000;
@@ -45,4 +45,9 @@
     font-size: 2em;
     text-align: center;
     margin-right: 1em;
+}
+
+.guesses {
+    color: gold;
+    font-weight: bold;
 }
