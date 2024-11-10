@@ -1,11 +1,12 @@
-import './GameOver.css'
+import "./GameOver.css";
 
-const GameOver = () => {
-    return (
-        <div>
-            <h2>GameOver</h2>
-        </div>
-    )
-}
+const GameOver = ({ retryGame }) => {
+  return (
+    <div>
+      <h2>GameOver</h2>
+      <button onClick={retryGame}>Resetar o jogo</button>
+    </div>
+  );
+};
 
-export default GameOver
+export default GameOver;
