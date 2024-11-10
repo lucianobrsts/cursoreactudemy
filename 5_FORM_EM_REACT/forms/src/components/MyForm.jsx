@@ -7,7 +7,8 @@ const MyForm = ({ user }) => {
   // 3- Gerenciamento de dados
   const [name, setName] = useState(user ? user.name : "");
   const [email, setEmail] = useState(user ? user.email : "");
-  const [bio, setBio] = useState();
+  const [bio, setBio] = useState(user ? user.bio : "");
+  const [role, setRole] = useState(user ? user.role : "");
 
   const handleNome = (e) => {
     setName(e.target.value);
@@ -19,7 +20,7 @@ const MyForm = ({ user }) => {
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log("Enviando o formulário!");
-    console.log(name, email, bio);
+    console.log(name, email, bio, role);
 
     // validação
     // envio
@@ -58,6 +59,7 @@ const MyForm = ({ user }) => {
             value={email}
           />
         </label>
+
         {/* 8 - textarea */}
         <label>
           <span>Texto:</span>
@@ -69,6 +71,16 @@ const MyForm = ({ user }) => {
             onChange={(e) => setBio(e.target.value)}
             value={bio}
           ></textarea>
+        </label>
+
+        <label>
+            <span>Função no sistema:</span>
+            <select name="role" onChange={(e) => setRole(e.target.value)} value={role}>
+                <option>Selecione:</option>
+                <option value="user">Usuário</option>
+                <option value="editar">Editor</option>
+                <option value="admin">Administrador</option>
+            </select>
         </label>
         <input type="submit" value="Enviar" />
       </form>
