@@ -39,6 +39,11 @@
       "id": "bd01",
       "name": "Cadeira",
       "price": "200"
+    },
+    {
+      "id": "bd44",
+      "name": "Cadeira de Balanço",
+      "price": "555.78"
     }
   ]
 }
