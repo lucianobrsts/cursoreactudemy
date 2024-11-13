@@ -5,13 +5,13 @@ import { useState, useEffect } from "react";
 // 4- Custom hook
 import { useFetch } from "./hooks/useFetch";
 
-const url = "http://localhost:3000/products";
+const url = "http://localhost:3001/products";
 
 function App() {
   const [products, setProducts] = useState([]);
 
   // 4- custom hook
-  const { data: items, httpConfig, loading } = useFetch(url);
+  const { data: items, httpConfig, loading, error } = useFetch(url);
 
   const [name, setName] = useState("");
   const [price, setPrice] = useState("");
@@ -59,7 +59,8 @@ function App() {
       <h1>Lista de Produtos</h1>
       {/* 6- Loading*/}
       {loading && <p>Carregando dados...</p>}
-      {!loading && (
+      {error && <p>{error}</p>}
+      {!error && (
         <ul>
         {items && items.map((product) => (
           <li key={product.id}>
