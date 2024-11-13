@@ -1,41 +1,6 @@
 {
   "products": [
     {
-      "id": "1",
-      "name": "Camisa",
-      "price": 59.9
-    },
-    {
-      "id": "2",
-      "name": "Calça vermelha",
-      "price": 90
-    },
-    {
-      "id": "3",
-      "name": "Boné aba reta",
-      "price": 29.9
-    },
-    {
-      "id": "c20f",
-      "name": "Jaqueta de couro",
-      "price": "799.9"
-    },
-    {
-      "id": "d1eb",
-      "name": "Capa de Chuva",
-      "price": "50.5"
-    },
-    {
-      "id": "31d4",
-      "name": "Boné Maresia",
-      "price": "30.99"
-    },
-    {
-      "id": "5fc2",
-      "name": "Camiseta Manga Longa",
-      "price": "57.85"
-    },
-    {
       "id": "bd01",
       "name": "Cadeira",
       "price": "200"
@@ -76,11 +41,6 @@
       "price": "10"
     },
     {
-      "id": "57f4",
-      "name": "Cabo HDMI",
-      "price": "10"
-    },
-    {
       "id": "ffdf",
       "name": "Suporte Microfone",
       "price": "60"
@@ -96,9 +56,9 @@
       "price": "175"
     },
     {
-      "id": "a609",
-      "name": "Mouse Optico 3D",
-      "price": "1500"
+      "id": "4b49",
+      "name": "CAmisa",
+      "price": "1000"
     }
   ]
 }

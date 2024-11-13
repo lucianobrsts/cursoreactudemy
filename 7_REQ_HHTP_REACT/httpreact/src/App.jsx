@@ -5,13 +5,18 @@ import { useState, useEffect } from "react";
 // 4- Custom hook
 import { useFetch } from "./hooks/useFetch";
 
-const url = "http://localhost:3001/products";
+const url = "http://localhost:3000/products";
 
 function App() {
   const [products, setProducts] = useState([]);
 
   // 4- custom hook
-  const { data: items, httpConfig, loading, error } = useFetch(url);
+  const {
+    data: items,
+    httpConfig,
+    loading,
+    error
+  } = useFetch(url);
 
   const [name, setName] = useState("");
   const [price, setPrice] = useState("");
@@ -48,11 +53,16 @@ function App() {
     // setProducts((prevProducts) => [...prevProducts, addedProduct]);
 
     // 5- Refatorando POST
-    httpConfig(product, "POST")
+    httpConfig(product, "POST");
 
     setName("");
     setPrice("");
   };
+
+  // 8 - Desafio 6
+  const handleRemove = (id) => {
+    httpConfig(id, "DELETE")
+  }
 
   return (
     <div>
@@ -62,12 +72,14 @@ function App() {
       {error && <p>{error}</p>}
       {!error && (
         <ul>
-        {items && items.map((product) => (
-          <li key={product.id}>
-            {product.name} - R$: {product.price}
-          </li>
-        ))}
-      </ul>
+          {items &&
+            items.map((product) => (
+              <li key={product.id}>
+                {product.name} - R$: {product.price} -{" "}
+                <button onClick={() => handleRemove(product.id)}>Delete</button>
+              </li>
+            ))}
+        </ul>
       )}
       <div className="add_product">
         <form onSubmit={handleSubmit}>
