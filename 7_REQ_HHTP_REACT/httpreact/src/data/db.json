@@ -59,6 +59,16 @@
       "id": "dfcf",
       "name": "TouchPad",
       "price": "120.7"
+    },
+    {
+      "id": "ff6c",
+      "name": "Suporte Monitor",
+      "price": "120"
+    },
+    {
+      "id": "27f1",
+      "name": "Cabo HDMI",
+      "price": "10"
     }
   ]
 }
