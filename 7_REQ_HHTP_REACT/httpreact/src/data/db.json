@@ -44,6 +44,21 @@
       "id": "bd44",
       "name": "Cadeira de Balanço",
       "price": "555.78"
+    },
+    {
+      "id": "c56d",
+      "name": "Cadeira de palinha",
+      "price": "100"
+    },
+    {
+      "id": "604a",
+      "name": "Mouse",
+      "price": "60"
+    },
+    {
+      "id": "dfcf",
+      "name": "TouchPad",
+      "price": "120.7"
     }
   ]
 }
