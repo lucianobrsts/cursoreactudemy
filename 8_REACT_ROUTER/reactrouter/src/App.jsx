@@ -7,6 +7,7 @@ import About from "./pages/About";
 import Navbar from "./components/Navbar";
 import Product from "./pages/Product";
 import Info from "./pages/Info";
+import NotFound from "./pages/NotFound";
 
 function App() {
   return (
@@ -23,6 +24,10 @@ function App() {
           
           {/* 6- Nested routes */}
           <Route path="/products/:id/info" element={<Info />} />
+
+          {/* 7- No match routes */}
+          <Route path="*" element={<NotFound />} />
+
         </Routes>
       </BrowserRouter>
     </div>
