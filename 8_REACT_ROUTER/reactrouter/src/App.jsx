@@ -1,6 +1,6 @@
 import "./App.css";
 
-import { BrowserRouter, Routes, Route, RouterProvider } from "react-router-dom";
+import { BrowserRouter, Routes, Route, RouterProvider, Navigate } from "react-router-dom";
 
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -33,6 +33,9 @@ function App() {
           
           {/* 9- Search */}
           <Route path="/search" element={<Search />} />
+          
+          {/* 9- Search */}
+          <Route path="/company" element={<Navigate to="/about" />} />
 
           {/* 7- No match routes */}
           <Route path="*" element={<NotFound />} />
