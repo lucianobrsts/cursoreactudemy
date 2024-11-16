@@ -1,5 +1,6 @@
 button {
     border: solid 1px #fff;
+    margin: 10px;
 }
 
 button:hover {
