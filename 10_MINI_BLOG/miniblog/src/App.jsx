@@ -8,7 +8,12 @@ import About from "./pages/About/About";
 function App() {
   return (
     <div>
-      <BrowserRouter>
+      <BrowserRouter
+        future={{
+          v7_relativeSplatPath: true,
+          v7_startTransition: true,
+        }}
+      >
         <div className="container">
           <Routes>
             <Route path="/" element={<Home />} />
