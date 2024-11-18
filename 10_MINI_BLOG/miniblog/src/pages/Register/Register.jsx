@@ -29,6 +29,7 @@ export default function Register() {
         </label>
 
         <label>
+        <span>Senha:</span>
           <input
             type="password"
             name="password"
@@ -38,6 +39,7 @@ export default function Register() {
         </label>
 
         <label>
+        <span>Confirmar Senha:</span>
           <input
             type="password"
             name="ConfirmPassword"
