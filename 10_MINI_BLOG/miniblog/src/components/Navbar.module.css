@@ -9,6 +9,7 @@
 .brand {
     font-size: 1.2em;
     text-decoration: none;
+    color: #fff;
 }
 
 .brand span {
@@ -19,19 +20,18 @@
 .links_list {
     display: flex;
     list-style: none;
-}
-
-.links_list {
     margin-right: 1em;
+    color: gold;
 }
 
 .links_list li a {
     padding: .4em .6em;
     text-decoration: none;
+    color: gold;
 }
 
 .active {
     background-color: #000;
-    color: #fff;
+    color: #fff !important;
     font-weight: bold;
   }
