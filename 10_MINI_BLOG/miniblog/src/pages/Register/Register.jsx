@@ -24,6 +24,8 @@ export default function Register() {
       setError("As senhas precisam ser iguais");
       return;
     }
+
+    console.log(user);
   };
 
   return (
