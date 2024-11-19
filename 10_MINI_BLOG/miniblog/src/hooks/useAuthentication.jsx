@@ -10,6 +10,7 @@ import {
 
 import { useState, useEffect } from "react";
 
+//Register
 export const useAuthentication = () => {
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(null);
@@ -63,6 +64,12 @@ export const useAuthentication = () => {
     }
   };
 
+  //Logout - sign out
+  const logout = () => {
+    checkIfIsCancelled();
+    signOut(auth);
+  };
+
   useEffect(() => {
     return () => setCancelled(true);
   }, []);
@@ -72,5 +79,6 @@ export const useAuthentication = () => {
     createUser,
     error,
     loading,
+    logout,
   };
 };
