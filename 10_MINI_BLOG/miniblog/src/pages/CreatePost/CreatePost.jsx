@@ -12,28 +12,9 @@ export default function CreatePost() {
   const [tags, setTags] = useState([]);
   const [formError, setFormError] = useState("");
 
-  const { user } = useAuthValue();
-
-  const [insertDocument, response] = useInsertDocument();
-
   const handleSubmit = (e) => {
     e.preventDefault();
-    setFormError("");
-
-    // validar a url da imagem
-
-    // criar o array de tags
-
-    // checar todos os valores
-
-    insertDocument({
-      title,
-      image,
-      body,
-      tags,
-      uid: user.uid,
-      createdBy: user.displayName,
-    });
+    
   };
 
   return (
@@ -89,14 +70,14 @@ export default function CreatePost() {
           />
         </label>
         <button className="btn">Cadatrar</button>
-        {!loading && <button className="btn">Cadatrar</button>}
+        {/*{!loading && <button className="btn">Cadatrar</button>}
         {loading && (
           <button className="btn" disabled>
             Aguarde...
           </button>
         )}
 
-        {error && <p className="error">{error}</p>}
+        {error && <p className="error">{error}</p>}*/}
       </form>
     </div>
   );
