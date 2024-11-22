@@ -11,10 +11,34 @@ export default function CreatePost() {
   const [body, setBody] = useState("");
   const [tags, setTags] = useState([]);
   const [formError, setFormError] = useState("");
+  const { user } = useAuthValue();
+  const { insertDocument, response } = useInsertDocument("posts");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
+    setFormError("");
+
+    // validate image url
+
+    // criar o array de tags
+
+    // checar todos os valores
+
+    insertDocument({
+      title,
+      image,
+      body,
+      tags,
+      uid: user.uid,
+      createdBy: user.displayName,
+    });
+
+    setTitle("");
+    setImage("");
+    setBody("");
+    setTags("");
+
+    // Redirect to home page
   };
 
   return (
@@ -42,7 +66,7 @@ export default function CreatePost() {
             name="image"
             required
             placeholder="Insira uma imagem que representa o seu post..."
-            value={title}
+            value={image}
             onChange={(e) => setImage(e.target.value)}
           />
         </label>
@@ -69,15 +93,14 @@ export default function CreatePost() {
             onChange={(e) => setTags(e.target.value)}
           />
         </label>
-        <button className="btn">Cadatrar</button>
-        {/*{!loading && <button className="btn">Cadatrar</button>}
-        {loading && (
+        {!response.loading && <button className="btn">Criar post!</button>}
+        {response.loading && (
           <button className="btn" disabled>
-            Aguarde...
+            Aguarde.. .
           </button>
         )}
 
-        {error && <p className="error">{error}</p>}*/}
+        {response.error && <p className="error">{response.error}</p>}
       </form>
     </div>
   );
