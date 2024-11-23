@@ -96,7 +96,7 @@ export default function CreatePost() {
         {!response.loading && <button className="btn">Criar post!</button>}
         {response.loading && (
           <button className="btn" disabled>
-            Aguarde.. .
+            Aguarde...
           </button>
         )}
 
