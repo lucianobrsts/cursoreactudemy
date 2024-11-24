@@ -9,7 +9,7 @@ import {
   QuerySnapshot,
 } from "firebase/firestore";
 
-export const useFetchDocuments = (docCollection, search = null, uid = null) => {
+export const useFetchDocuments = (docCollection, search = null, uid = "") => {
   const [documents, setDocuments] = useState(null);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(null);
@@ -45,16 +45,17 @@ export const useFetchDocuments = (docCollection, search = null, uid = null) => {
       } catch (error) {
         console.log(error);
         setError(error.message);
-        setLoading(false);
       }
+      setLoading(false);
     }
 
     loadData();
   }, [docCollection, search, uid, cancelled]);
+  console.log(documents);
 
   useEffect(() => {
     return () => setCancelled(true);
   }, []);
 
-  return documents, loading, error;
+  return { documents, loading, error };
 };
