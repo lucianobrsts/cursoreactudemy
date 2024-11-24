@@ -29,3 +29,10 @@
 .noposts a {
     padding: 10px 25px;
 }
+
+.home img {
+    width: 300px;
+    border: solid 3px #000;
+    border-radius: 10px;
+    margin-top: 30px;
+}

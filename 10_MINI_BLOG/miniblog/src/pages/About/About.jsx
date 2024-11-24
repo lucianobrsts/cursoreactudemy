@@ -14,12 +14,12 @@ export default function About() {
             <h2>Sobre o Mini <span>Blog</span></h2>
             <p>Este projeto consiste em um blog feito com react no front-end e Firebase no back-end.</p>
 
-            <div >
+            <div>
                 <img src={reactLogo} alt="React" />
                 <img src={firebaseLogo} alt="Firebase" />
             </div>
 
-            <div >
+            <div>
                 <img src={htmlLogo} alt="HTML" />
                 <img src={cssLogo} alt="CSS" />
                 <img src={javascriptLogo} alt="Javascript" />
