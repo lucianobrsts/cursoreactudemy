@@ -10,13 +10,9 @@ export default function Dashboard() {
   const { user } = useAuthValue();
   const uid = user.uid;
 
-  const { documents: posts, loading } = useFetchDocuments("posts", null, uid);
+  const { documents: posts } = useFetchDocuments("posts", null, uid);
 
   const { deleteDocument } = useDeleteDocument("posts");
-
-  if (loading) {
-    return <p>Carregando...</p>;
-  }
 
   return (
     <div className={styles.dashboard}>
@@ -48,14 +44,14 @@ export default function Dashboard() {
                   </Link>
 
                   <Link
-                    to={`/post/edit/${post.id}`}
+                    to={`/posts/edit/${post.id}`}
                     className="btn btn-outline"
                   >
                     Editar
                   </Link>
 
                   <button
-                    onClick={deleteDocument(post.id)}
+                    onClick={() => deleteDocument(post.id)}
                     className="btn btn-outline btn-danger"
                   >
                     Excluir
