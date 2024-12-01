@@ -11,6 +11,10 @@
     justify-content: center;
 }
 
+.post_container_p {
+    padding: 30px;
+}
+
 .tags p {
     margin-right: 1em;
 }
