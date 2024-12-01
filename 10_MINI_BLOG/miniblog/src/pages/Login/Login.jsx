@@ -29,6 +29,7 @@ export default function Login() {
       setError(authError);
     }
   }, [authError]);
+  
   return (
     <div className={styles.login}>
       <h1>Entrar</h1>
