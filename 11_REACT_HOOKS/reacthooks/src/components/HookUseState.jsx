@@ -27,11 +27,11 @@ const HookUseState = () => {
   return (
     <div>
       {/* 1- useState */}
+      <p>- HookUseState -</p>
       <p>Variável: {userName}</p>
       <p>userState: {name}</p>
 
       <button onClick={changeNames}>Mudar nomes</button>
-      <hr />
 
       {/* 1- useState */}
       <p>Digite a sua idade:</p>
