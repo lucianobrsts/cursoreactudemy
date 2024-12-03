@@ -46,7 +46,7 @@ const HookUseReducer = () => {
   return (
     <div>
       {/* 1- useState */}
-      <p>- HookUseState -</p>
+      <h2>- HookUseState -</h2>
       <p>Número: {number}</p>
       <button onClick={dispatch}>Alterar número!</button>
 
