@@ -11,15 +11,37 @@ const HookUseRef = () => {
     // setCounter(counter + 1); => causa loop infinito
   });
 
+  // 2- useRef e DOM
+  const inputRef = useRef();
+  const [text, setText] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setText("");
+    inputRef.current.focus();
+  };
+
   return (
     <div>
       <h2>HookUseRef</h2>
+      {/* 1- useRef */}
       <p>O componente renderizou: {numberRef.current}</p>
       <p>Counter 1: {counter}</p>
       <button onClick={() => setCounter(counter + 1)}>Counter A</button>
 
       <p>Counter 2: {counterB}</p>
       <button onClick={() => setCounterB(counterB + 1)}>Counter B</button>
+
+      {/* 1- useRef */}
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          ref={inputRef}
+          value={text}
+          onChange={(e) => setText(e.target.value)}
+        />
+        <input type="submit" value="Enviar" />
+      </form>
       <hr />
     </div>
   );
