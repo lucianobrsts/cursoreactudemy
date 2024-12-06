@@ -28,12 +28,12 @@ export const HookUseEffect = () => {
 
   // 4- Cleanup do useEffect
   useEffect(() => {
-   // const timer = setTimeout(() => {
-   //   console.log("Hello world");
-      // setAnotherNumber(anotherNumber + 1)
-   // }, 2000);
+    // const timer = setTimeout(() => {
+    //   console.log("Hello world");
+    //   setAnotherNumber(anotherNumber + 1)
+    // }, 2000);
 
-   // return () => clearTimeout(timer);
+    // return () => clearTimeout(timer);
   }, [anotherNumber]);
 
   return (
