@@ -23,7 +23,7 @@ const HookUseRef = () => {
 
   return (
     <div>
-      <h2>HookUseRef</h2>
+      <h2>useRef</h2>
       {/* 1- useRef */}
       <p>O componente renderizou: {numberRef.current}</p>
       <p>Counter 1: {counter}</p>

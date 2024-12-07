@@ -27,7 +27,7 @@ const HookUseState = () => {
   return (
     <div>
       {/* 1- useState */}
-      <h2>- HookUseState -</h2>
+      <h2>- useState -</h2>
       <p>Variável: {userName}</p>
       <p>userState: {name}</p>
 
