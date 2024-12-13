@@ -14,7 +14,7 @@ const generateToken = (id) => {
 
 // Register user and sign in
 const register = async (req, res) => {
-  const {name, email, password} = req.body;
+  const { name, email, password } = req.body;
 
   //check if user exists
   const user = await User.findOne({ email });
@@ -49,6 +49,12 @@ const register = async (req, res) => {
   });
 };
 
+// Sign user in
+const login = (req, res) => {
+  res.send("Login");
+};
+
 module.exports = {
   register,
+  login,
 };
