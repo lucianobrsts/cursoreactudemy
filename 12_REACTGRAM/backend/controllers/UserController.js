@@ -55,21 +55,22 @@ const login = async (req, res) => {
   const user = await User.findOne({ email });
 
   // Check if user exists
-  if (!User) {
+  if (!user) {
     res.status(404).json({ errors: ["Usuário não encontrado."] });
     return;
   }
 
   // Check if password matches
   if (!(await bcrypt.compare(password, user.password))) {
-    res.status(422).json({ errors: ["Senha inválida."] });
+    res.status(422).json({ errors: ["Senha inválida!"] });
+    return;
   }
 
   // Return user with token
-  res.status(201).json({
-    _id: newUser._id,
+  res.status(200).json({
+    _id: user._id,
     profileImage: user.profileImage,
-    token: generateToken(newUser._id),
+    token: generateToken(user._id),
   });
 };
 
